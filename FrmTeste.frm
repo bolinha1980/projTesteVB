@@ -9,19 +9,27 @@ Begin VB.Form FrmTeste
    ScaleHeight     =   2625
    ScaleWidth      =   4455
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton CmdMult 
+      Caption         =   "Multiplicacao"
+      Height          =   405
+      Left            =   1260
+      TabIndex        =   5
+      Top             =   660
+      Width           =   1125
+   End
    Begin VB.CommandButton CmdSoma 
       Caption         =   "Soma"
-      Height          =   705
-      Left            =   30
+      Height          =   405
+      Left            =   60
       TabIndex        =   2
-      Top             =   960
-      Width           =   1545
+      Top             =   660
+      Width           =   1125
    End
    Begin VB.TextBox Text2 
       Height          =   315
-      Left            =   1440
+      Left            =   1260
       TabIndex        =   1
-      Top             =   240
+      Top             =   270
       Width           =   1125
    End
    Begin VB.TextBox Text1 
@@ -35,9 +43,9 @@ Begin VB.Form FrmTeste
       AutoSize        =   -1  'True
       Caption         =   "Valor 2"
       Height          =   195
-      Left            =   1470
+      Left            =   1290
       TabIndex        =   4
-      Top             =   30
+      Top             =   60
       Width           =   495
    End
    Begin VB.Label Label1 
@@ -56,6 +64,11 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
+
+Private Sub CmdMult_Click()
+    Dim CT As New ClassTeste
+    MsgBox CT.FuncaoRetornaMult(Val(Text1.Text), Val(Text2.Text))
+End Sub
 
 Private Sub CmdSoma_Click()
     Dim CT As New ClassTeste

@@ -16,3 +16,7 @@ Public Function FuncaoRetornaSoma(ByVal Vr1 As Currency, ByVal Vr2 As Currency) 
     FuncaoRetornaSoma = Vr1 + Vr2
 End Function
 
+Public Function FuncaoRetornaMult(ByVal Vr1 As Currency, ByVal Vr2 As Currency) As Currency
+    FuncaoRetornaMult = Vr1 * Vr2
+End Function
+
