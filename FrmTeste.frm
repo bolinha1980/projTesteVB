@@ -9,6 +9,14 @@ Begin VB.Form FrmTeste
    ScaleHeight     =   2625
    ScaleWidth      =   4455
    StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton CmdSub 
+      Caption         =   "Subtração"
+      Height          =   405
+      Left            =   60
+      TabIndex        =   6
+      Top             =   1140
+      Width           =   1125
+   End
    Begin VB.CommandButton CmdMult 
       Caption         =   "Multiplicacao"
       Height          =   405
@@ -73,6 +81,11 @@ End Sub
 Private Sub CmdSoma_Click()
     Dim CT As New ClassTeste
     MsgBox CT.FuncaoRetornaSoma(Val(Text1.Text), Val(Text2.Text))
+End Sub
+
+Private Sub CmdSub_Click()
+    Dim CT As New ClassTeste
+    MsgBox CT.FuncaoRetornaSub(Val(Text1.Text), Val(Text2.Text))
 End Sub
 
 Private Sub Text1_KeyPress(KeyAscii As Integer)

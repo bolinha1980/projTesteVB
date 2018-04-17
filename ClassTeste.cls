@@ -20,3 +20,6 @@ Public Function FuncaoRetornaMult(ByVal Vr1 As Currency, ByVal Vr2 As Currency) 
     FuncaoRetornaMult = Vr1 * Vr2
 End Function
 
+Public Function FuncaoRetornaSub(ByVal Vr1 As Currency, ByVal Vr2 As Currency) As Currency
+    FuncaoRetornaSub = Vr1 - Vr2
+End Function
